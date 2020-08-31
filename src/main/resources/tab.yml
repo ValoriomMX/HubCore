@@ -1,0 +1,7 @@
+TAB:
+  ENABLED: true # false state dont work
+  FOOTER: "&apene de vaca"
+  HEADER: "&apene de alcantarilla"
+  LEFT:
+    1: "Something here"
+    2: "u stupid"
