@@ -1,0 +1,15 @@
+name: HubCore
+author: Hulk
+main: es.hulk.addons.main.Main
+version: 1.0
+load: POSTWORLD
+loadbefore:
+  - AquaCore
+
+depend: [PlaceholderAPI]
+
+commands:
+  fly:
+  addons:
+  selector:
+  debugCMD:

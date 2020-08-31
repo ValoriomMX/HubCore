@@ -1,0 +1,43 @@
+LICENSE-KEY: YMSfXOBJttKzIyO5nDormtbSc
+
+INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
+
+FLY:
+  ENABLED: true
+  TURNED-OFF: "&CFly has turned off"
+  TURNED-ON: "&aFly has turned on"
+
+BOOLEANS:
+  INVCLICK: true
+  CLEARINV-ON-JOIN: true
+  INVDRAG: true
+  DROPITEMS: true
+  BLOCKPLACE:
+    ENABLED: true
+    MESSAGE: "&CYou cannot place blocks here"
+  BLOCKBREAK:
+    ENABLED: true
+    MESSAGE: "&cYou cannot break blocks here"
+  FOOTER:
+    ENABLED: true
+    MESSAGE: "footer"
+  HEADER:
+    ENABLED: true
+    MESSAGE: "header"
+
+JOIN-MESSAGE:
+  ENABLED: true
+  MESSAGE:
+    - "&aWelcome %player_name%"
+
+CHAT-FORMAT:
+  ENABLED: false
+  FORMAT: "%player_name% &8» &r<message>"
+
+DEFAULT-JOIN-MESSAGE:
+  ENABLED: false
+  MESSAGE: ""
+
+DEFAULT-QUIT-MESSAGE:
+  ENABLED: false
+  MESSAGE: ""

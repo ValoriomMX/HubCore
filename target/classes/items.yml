@@ -1,0 +1,15 @@
+SERVER-SELECTOR-ITEM:
+  ENABLED: true
+  DISPLAYNAME: "&3Server Selector &7(Right Click)"
+  MATERIAL: ENCHANTED_BOOK
+  DATA: 0
+  SLOT: 0
+  AMOUNT: 1
+
+HUB-SELECTOR-ITEM:
+  ENABLED: true
+  DISPLAYNAME: "&3Hub Selector &7(Right Click)"
+  MATERIAL: ENDER_CHEST
+  DATA: 0
+  SLOT: 8
+  AMOUNT: 1
