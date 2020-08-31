@@ -23,6 +23,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <build>
@@ -48,11 +52,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>iSpigot</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.8.9-IMANITYSPIGOT</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/librerias/spigot.jar</systemPath>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
