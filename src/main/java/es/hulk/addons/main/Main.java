@@ -58,9 +58,8 @@ public class Main extends JavaPlugin implements PluginMessageListener {
         createMenusConfig();
         //createTabConfig();
 
-        /*Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
+        Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
         License license = new License(getConfig().getString("LICENSE-KEY"), "https://pluginslicenses.000webhostapp.com", this);
-        license.debug();
         license.request();
         Bukkit.getServer().getConsoleSender().sendMessage("License checking: " + license.getLicense());
 
@@ -71,22 +70,18 @@ public class Main extends JavaPlugin implements PluginMessageListener {
             Bukkit.getServer().getConsoleSender().sendMessage("Welcome: " + license.getLicensedTo());
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
 
-         */
-
             this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
             this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
 
             /*Assemble assemble = new Assemble(this, new ScoreBoard());
             assemble.setTicks(2L);
-            assemble.setAssembleStyle(AssembleStyle.MODERN);
-
-             */
+            assemble.setAssembleStyle(AssembleStyle.MODERN);*/
 
             //new ImanityTabHandler(new Tabulator());
 
             registerEvents();
             registerCMDs();
-        /*
+
         } else {
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
             Bukkit.getServer().getConsoleSender().sendMessage("Login denied");
@@ -96,8 +91,6 @@ public class Main extends JavaPlugin implements PluginMessageListener {
             Bukkit.getPluginManager().disablePlugin(this);
             return;
         }
-
-         */
     }
 
     @Override
