@@ -1,8 +1,10 @@
 package es.hulk.addons.events;
 
+import com.lunarclient.bukkitapi.LunarClientAPI;
 import es.hulk.addons.utils.Utils;
 import es.hulk.addons.main.Main;
 import me.clip.placeholderapi.PlaceholderAPI;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,11 +14,20 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import static com.lunarclient.bukkitapi.object.StaffModule.*;
+
 public class Join implements Listener {
+
+    private final LunarClientAPI lunarClientAPI = LunarClientAPI.getInstance();
 
     @EventHandler
     public void JoinEvent(PlayerJoinEvent e) {
         Player p = e.getPlayer();
+
+        if (p.hasPermission("lunar.utils.staff-modules")) {
+            lunarClientAPI.giveAllStaffModules(p);
+            p.sendMessage(Utils.color("&8[&bLunarClient&8] &7You have received all Staff-Modules. "));
+        }
 
         if (Main.getInstance().getConfig().getBoolean("BOOLEANS.CLEARINV-ON-JOIN")) {
             p.getInventory().clear();
@@ -56,16 +67,27 @@ public class Join implements Listener {
                         selitem.setItemMeta(brujulaMeta);
                         p.getInventory().setItem(Main.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.SLOT"), selitem);
                 }
+                if (Main.getInstance().getItemsConfig().getBoolean("LINKS-ITEM.ENABLED")) {
+                    ItemStack selitem = new ItemStack(Material.getMaterial(Main.getInstance().getItemsConfig().getString("LINKS-ITEM.MATERIAL")), Main.getInstance().getItemsConfig().getInt("LINKS-ITEM.AMOUNT"), (short) Main.getInstance().getItemsConfig().getInt("LINKS-ITEM.DATA"));
+                    ItemMeta brujulaMeta = selitem.getItemMeta();
+                    brujulaMeta.setDisplayName(Utils.color(Main.getInstance().getItemsConfig().getString("LINKS-ITEM.DISPLAYNAME")));
+                    selitem.setItemMeta(brujulaMeta);
+                    p.getInventory().setItem(Main.getInstance().getItemsConfig().getInt("LINKS-ITEM.SLOT"), selitem);
+                }
                 if (Main.getInstance().getItemsConfig().getBoolean("HUB-SELECTOR-ITEM.ENABLED")) {
-                    ItemStack hubitem = new ItemStack(Material.getMaterial(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.MATERIAL")), Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.AMOUNT"), (short) Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.DATA"));
-                    ItemMeta brujulaMeta = hubitem.getItemMeta();
-                    brujulaMeta.setDisplayName(Utils.color(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.DISPLAYNAME")));
-                    hubitem.setItemMeta(brujulaMeta);
-                    p.getInventory().setItem(Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.SLOT"), hubitem);
+                    if (p.hasPermission("hubcore.giveitems.selector")) {
+                        ItemStack hubitem = new ItemStack(Material.getMaterial(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.MATERIAL")), Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.AMOUNT"), (short) Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.DATA"));
+                        ItemMeta brujulaMeta = hubitem.getItemMeta();
+                        brujulaMeta.setDisplayName(Utils.color(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.DISPLAYNAME")));
+                        hubitem.setItemMeta(brujulaMeta);
+                        p.getInventory().setItem(Main.getInstance().getItemsConfig().getInt("HUB-SELECTOR-ITEM.SLOT"), hubitem);
+                    }
                 }
             }
         }.runTaskLater(Main.getInstance(), 5);
+
     }
+
 }
 
 

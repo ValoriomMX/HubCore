@@ -3,18 +3,17 @@ package es.hulk.addons.main;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
+import es.hulk.addons.commands.*;
 import es.hulk.addons.tab.Tabulator;
 import es.hulk.addons.utils.License;
 import es.hulk.addons.utils.board.AssembleStyle;
-import es.hulk.addons.commands.DebugCMD;
-import es.hulk.addons.commands.FlyCMD;
-import es.hulk.addons.commands.ReloadCMD;
-import es.hulk.addons.commands.SelectorCMD;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
 import es.hulk.addons.scoreboard.ScoreBoard;
+import es.hulk.addons.utils.command.CommandFramework;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -42,44 +41,52 @@ public class Main extends JavaPlugin implements PluginMessageListener {
     private File menusFile;
     private FileConfiguration menusConfig;
 
-    private static Main instance;
     private static int playercount = 0;
+
+    private CommandFramework commandFramework;
+    @Getter public static Main instance;
 
     @Override
     public void onEnable() {
-
         instance = this;
+        commandFramework = new CommandFramework(this);
 
         this.saveDefaultConfig();
 
         createScoreboardConfig();
-        createTabConfig();
         createItemsConfig();
         createMenusConfig();
+        //createTabConfig();
 
-        Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
+        /*Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
         License license = new License(getConfig().getString("LICENSE-KEY"), "https://pluginslicenses.000webhostapp.com", this);
         license.debug();
         license.request();
         Bukkit.getServer().getConsoleSender().sendMessage("License checking: " + license.getLicense());
+
+
         if (license.isValid()) {
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
             Bukkit.getServer().getConsoleSender().sendMessage("Login accepted");
             Bukkit.getServer().getConsoleSender().sendMessage("Welcome: " + license.getLicensedTo());
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
 
+         */
+
             this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
             this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
 
-            Assemble assemble = new Assemble(this, new ScoreBoard());
+            /*Assemble assemble = new Assemble(this, new ScoreBoard());
             assemble.setTicks(2L);
             assemble.setAssembleStyle(AssembleStyle.MODERN);
 
-            new ImanityTabHandler(new Tabulator());
+             */
+
+            //new ImanityTabHandler(new Tabulator());
 
             registerEvents();
             registerCMDs();
-
+        /*
         } else {
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
             Bukkit.getServer().getConsoleSender().sendMessage("Login denied");
@@ -89,6 +96,8 @@ public class Main extends JavaPlugin implements PluginMessageListener {
             Bukkit.getPluginManager().disablePlugin(this);
             return;
         }
+
+         */
     }
 
     @Override
@@ -110,10 +119,12 @@ public class Main extends JavaPlugin implements PluginMessageListener {
 
     public void registerCMDs() {
 
-        getCommand("fly").setExecutor(new FlyCMD());
-        getCommand("addons").setExecutor(new ReloadCMD());
-        getCommand("selector").setExecutor(new SelectorCMD());
-        getCommand("debugCMD").setExecutor(new DebugCMD());
+        commandFramework.registerCommands(new LunarClientCommand());
+        commandFramework.registerCommands(new FlyCMD());
+        commandFramework.registerCommands(new ReloadCMD());
+        commandFramework.registerCommands(new DebugCMD());
+        commandFramework.registerCommands(new MainCMD());
+        commandFramework.registerCommands(new HelpCMD());
 
     }
 
@@ -216,5 +227,13 @@ public class Main extends JavaPlugin implements PluginMessageListener {
             e.printStackTrace();
         }
         p.sendPluginMessage(this, "BungeeCord", out.toByteArray());
+    }
+
+    public CommandFramework getCommandFramework() {
+        return commandFramework;
+    }
+
+    public void setCommandFramework(CommandFramework commandFramework) {
+        this.commandFramework = commandFramework;
     }
 }

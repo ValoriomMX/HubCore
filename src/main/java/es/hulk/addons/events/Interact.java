@@ -4,7 +4,9 @@ import es.hulk.addons.utils.Utils;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.SelectorInv;
 import es.hulk.addons.main.Main;
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -26,6 +28,13 @@ public class Interact implements Listener {
 
             if(is.getType() == Material.valueOf(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.MATERIAL")) && is.getItemMeta().getDisplayName().equalsIgnoreCase(Utils.color(Main.getInstance().getItemsConfig().getString("HUB-SELECTOR-ITEM.DISPLAYNAME")))) {
                 HubServerInv.openInventory(e.getPlayer());
+            }
+
+            if(is.getType() == Material.valueOf(Main.getInstance().getItemsConfig().getString("LINKS-ITEM.MATERIAL")) && is.getItemMeta().getDisplayName().equalsIgnoreCase(Utils.color(Main.getInstance().getItemsConfig().getString("LINKS-ITEM.DISPLAYNAME")))) {
+                for (String s : Main.getInstance().getConfig().getStringList("LINKS-ITEM.MESSAGE")) {
+                    String placeholder = PlaceholderAPI.setPlaceholders(e.getPlayer(), s);
+                    e.getPlayer().sendMessage(Utils.color(placeholder));
+                }
             }
         }
     }

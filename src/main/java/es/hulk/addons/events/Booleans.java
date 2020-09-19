@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCreativeEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 
@@ -63,4 +64,5 @@ public class Booleans implements Listener {
             p.sendMessage(Utils.color(Utils.stringConfig("BOOLEANS.BLOCKBREAK.MESSAGE")));
         }
     }
+
 }

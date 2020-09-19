@@ -13,3 +13,11 @@ HUB-SELECTOR-ITEM:
   DATA: 0
   SLOT: 8
   AMOUNT: 1
+
+LINKS-ITEM:
+  ENABLED: true
+  DISPLAYNAME: "&6Important Links &7(Right Click)"
+  MATERIAL: PAPER
+  DATA: 0
+  SLOT: 2
+  AMOUNT: 1

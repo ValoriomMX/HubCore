@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <groupId>es.hulk</groupId>
-    <artifactId>HubCore</artifactId>
+    <artifactId>HubAddons</artifactId>
     <version>1.0-FINAL</version>
     <modelVersion>4.0.0</modelVersion>
     <properties>
@@ -26,6 +26,14 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>lunarclient-public</id>
+            <url>https://maven.moonsworth.com/repository/lunarclient-public/</url>
+        </repository>
+        <repository>
+            <id>destroystokyo-repo</id>
+            <url>https://repo.destroystokyo.com/repository/maven-snapshots/</url>
         </repository>
     </repositories>
 
@@ -55,7 +63,7 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
@@ -81,6 +89,12 @@
             <version>0.1</version>
             <scope>system</scope>
             <systemPath>${basedir}/librerias/ImanityFramework-Spigot.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lunarclient</groupId>
+            <artifactId>bukkitapi</artifactId>
+            <version>1.0-20200729.212152-7</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

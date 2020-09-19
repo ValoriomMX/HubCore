@@ -1,4 +1,4 @@
-name: HubCore
+name: HubAddons
 author: Hulk
 main: es.hulk.addons.main.Main
 version: 1.0
@@ -7,9 +7,3 @@ loadbefore:
   - AquaCore
 
 depend: [PlaceholderAPI]
-
-commands:
-  fly:
-  addons:
-  selector:
-  debugCMD:

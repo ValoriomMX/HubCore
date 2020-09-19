@@ -7,6 +7,9 @@ FLY:
   TURNED-OFF: "&CFly has turned off"
   TURNED-ON: "&aFly has turned on"
 
+LUNARCLIENT:
+  STAFFMODULES: true
+
 BOOLEANS:
   INVCLICK: true
   CLEARINV-ON-JOIN: true
@@ -41,3 +44,7 @@ DEFAULT-JOIN-MESSAGE:
 DEFAULT-QUIT-MESSAGE:
   ENABLED: false
   MESSAGE: ""
+
+LINKS-ITEM:
+  MESSAGE:
+    - "&6Twitter: &f@InfinityHvlk"

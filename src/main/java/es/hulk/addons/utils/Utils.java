@@ -48,4 +48,12 @@ public class Utils {
     public static String stringConfig(String path) {
         return Main.getInstance().getConfig().getString(path);
     }
+
+    public static List<Player> getOnlinePlayers() {
+        List<Player> players = new ArrayList<>();
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            players.add(player);
+        }
+        return players;
+    }
 }
