@@ -44,13 +44,11 @@ public class Main extends JavaPlugin implements PluginMessageListener {
 
     private static int playercount = 0;
 
-    private CommandFramework commandFramework;
     @Getter public static Main instance;
 
     @Override
     public void onEnable() {
         instance = this;
-        commandFramework = new CommandFramework(this);
 
         this.saveDefaultConfig();
 
@@ -113,10 +111,6 @@ public class Main extends JavaPlugin implements PluginMessageListener {
 
     public void registerCMDs() {
 
-        commandFramework.registerCommands(new LunarClientCommand());
-        commandFramework.registerCommands(new FlyCMD());
-        commandFramework.registerCommands(new DebugCMD());
-        commandFramework.registerCommands(new HelpCMD());
         CommandHandler.loadCommandsFromPackage(this, "es.hulk.addons.commands");
 
     }
