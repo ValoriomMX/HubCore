@@ -2,21 +2,15 @@ package es.hulk.addons.commands;
 
 import es.hulk.addons.utils.Utils;
 import es.hulk.addons.main.Main;
-import es.hulk.addons.utils.command.BaseCommand;
-import es.hulk.addons.utils.command.Command;
-import es.hulk.addons.utils.command.CommandArgs;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.imanity.framework.bukkit.command.Command;
 
-public class FlyCMD extends BaseCommand {
+public class FlyCMD {
 
-    @Command(name = "fly", aliases = "flymode", permission = "addons.command.fly")
+    @Command(names = {"fly", "flymode"}, permissionNode = "hubaddons.command.fly")
 
-    @Override
-    public void onCommand(CommandArgs cmd) {
+    public void flycmd(Player p) {
         if (Main.getInstance().getConfig().getBoolean("FLY.ENABLED")) {
-                Player p = cmd.getPlayer();
 
                 if (p.hasPermission("hulk.command.fly")) {
                     if (p.getAllowFlight()) {

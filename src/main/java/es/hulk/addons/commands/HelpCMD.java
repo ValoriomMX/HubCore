@@ -2,17 +2,14 @@ package es.hulk.addons.commands;
 
 import es.hulk.addons.utils.CC;
 import es.hulk.addons.utils.Utils;
-import es.hulk.addons.utils.command.BaseCommand;
-import es.hulk.addons.utils.command.Command;
-import es.hulk.addons.utils.command.CommandArgs;
 import org.bukkit.entity.Player;
+import org.imanity.framework.bukkit.command.Command;
 
-public class HelpCMD extends BaseCommand {
+public class HelpCMD {
 
-    @Command(name = "help", aliases = "hubaddons.help")
+    @Command(names = {"help", "hubaddons.help"})
 
-    @Override
-    public void onCommand(CommandArgs cmd) {
+    public void onCommand(Player cmd) {
         Player p = cmd.getPlayer();
 
         p.sendMessage(Utils.color("HubAddons Help"));

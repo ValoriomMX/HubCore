@@ -4,21 +4,18 @@ import com.lunarclient.bukkitapi.LunarClientAPI;
 import es.hulk.addons.main.Main;
 import es.hulk.addons.utils.CC;
 import es.hulk.addons.utils.Utils;
-import es.hulk.addons.utils.command.BaseCommand;
-import es.hulk.addons.utils.command.Command;
-import es.hulk.addons.utils.command.CommandArgs;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.entity.Player;
+import org.imanity.framework.bukkit.command.Command;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class LunarClientCommand extends BaseCommand {
-    @Command(name = "lunarclient",aliases = {"lc", "lc-api", "lcapi"})
+public class LunarClientCommand {
+    @Command(names = {"lunarclient", "lc", "lc-api"})
 
-    @Override
-    public void onCommand(CommandArgs cmd) {
+    public void onCommand(Player cmd) {
         Player player = cmd.getPlayer();
 
         player.sendMessage(CC.CHAT_BAR);

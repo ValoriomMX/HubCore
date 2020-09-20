@@ -22,6 +22,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 import es.hulk.addons.utils.board.*;
+import org.imanity.framework.bukkit.command.CommandHandler;
 import org.imanity.framework.bukkit.tablist.*;
 
 import java.io.File;
@@ -114,10 +115,9 @@ public class Main extends JavaPlugin implements PluginMessageListener {
 
         commandFramework.registerCommands(new LunarClientCommand());
         commandFramework.registerCommands(new FlyCMD());
-        commandFramework.registerCommands(new ReloadCMD());
         commandFramework.registerCommands(new DebugCMD());
-        commandFramework.registerCommands(new MainCMD());
         commandFramework.registerCommands(new HelpCMD());
+        CommandHandler.loadCommandsFromPackage(this, "es.hulk.addons.commands");
 
     }
 
