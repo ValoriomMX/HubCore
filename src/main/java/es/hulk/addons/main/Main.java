@@ -3,16 +3,11 @@ package es.hulk.addons.main;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import es.hulk.addons.commands.*;
-import es.hulk.addons.tab.Tabulator;
 import es.hulk.addons.utils.License;
-import es.hulk.addons.utils.board.AssembleStyle;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
-import es.hulk.addons.scoreboard.ScoreBoard;
-import es.hulk.addons.utils.command.CommandFramework;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -21,9 +16,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;
-import es.hulk.addons.utils.board.*;
 import org.imanity.framework.bukkit.command.CommandHandler;
-import org.imanity.framework.bukkit.tablist.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,7 +35,6 @@ public class Main extends JavaPlugin implements PluginMessageListener {
     private File menusFile;
     private FileConfiguration menusConfig;
 
-    private static int playercount = 0;
 
     @Getter public static Main instance;
 
@@ -214,13 +206,5 @@ public class Main extends JavaPlugin implements PluginMessageListener {
             e.printStackTrace();
         }
         p.sendPluginMessage(this, "BungeeCord", out.toByteArray());
-    }
-
-    public CommandFramework getCommandFramework() {
-        return commandFramework;
-    }
-
-    public void setCommandFramework(CommandFramework commandFramework) {
-        this.commandFramework = commandFramework;
     }
 }
