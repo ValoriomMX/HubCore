@@ -1,6 +1,6 @@
 package es.hulk.addons.utils;
 
-import es.hulk.addons.main.Main;
+import es.hulk.addons.HubAddons;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -42,11 +42,11 @@ public class Utils {
     }
 
     public static void noPerm(Player p) {
-        p.sendMessage(Utils.color(Main.getInstance().getConfig().getString("NO-PERMISSION")));
+        p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("NO-PERMISSION")));
     }
 
     public static String stringConfig(String path) {
-        return Main.getInstance().getConfig().getString(path);
+        return HubAddons.getInstance().getConfig().getString(path);
     }
 
     public static List<Player> getOnlinePlayers() {

@@ -1,6 +1,6 @@
 package es.hulk.addons.tab;
 
-import es.hulk.addons.main.Main;
+import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import org.bukkit.entity.Player;
 import org.imanity.framework.bukkit.tablist.ImanityTabAdapter;
@@ -17,17 +17,17 @@ public class Tabulator implements ImanityTabAdapter {
     FIX TAB.ENABLED BOOLEAN
      */
     public Set<BufferedTabObject> getSlots(Player player) {
-        if (Main.getInstance().getTabConfig().getBoolean("TAB.ENABLED")) {
+        if (HubAddons.getInstance().getTabConfig().getBoolean("TAB.ENABLED")) {
             Set<BufferedTabObject> toReturn = new HashSet<>();
             toReturn.add(
                     new BufferedTabObject()
-                            .text(Utils.color(Main.getInstance().getTabConfig().getString("TAB.LEFT.1")))
+                            .text(Utils.color(HubAddons.getInstance().getTabConfig().getString("TAB.LEFT.1")))
                             .column(TabColumn.LEFT)
                             .slot(1)
             );
             toReturn.add(
                     new BufferedTabObject()
-                            .text(Utils.color(Main.getInstance().getTabConfig().getString("TAB.LEFT.2")))
+                            .text(Utils.color(HubAddons.getInstance().getTabConfig().getString("TAB.LEFT.2")))
                             .column(TabColumn.LEFT)
                             .slot(2)
             );
@@ -39,7 +39,7 @@ public class Tabulator implements ImanityTabAdapter {
 
     @Override
     public String getFooter() {
-        if (Main.getInstance().getConfig().getBoolean("FOOTER.ENABLED")) {
+        if (HubAddons.getInstance().getConfig().getBoolean("FOOTER.ENABLED")) {
             String footer = Utils.color(Utils.stringConfig("FOOTER.MESSAGE"));
             return footer;
         }
@@ -48,7 +48,7 @@ public class Tabulator implements ImanityTabAdapter {
 
     @Override
     public String getHeader() {
-        if (Main.getInstance().getConfig().getBoolean("HEADER.ENABLED")) {
+        if (HubAddons.getInstance().getConfig().getBoolean("HEADER.ENABLED")) {
             String header = Utils.color(Utils.stringConfig("HEADER.MESSAGE"));
             return header;
         }

@@ -8,7 +8,11 @@ FLY:
   TURNED-ON: "&aFly has turned on"
 
 LUNARCLIENT:
-  STAFFMODULES: true
+  STAFFMODULES:
+    ENABLE-ON-JOIN: true
+    COMMAND:
+      ENABLE-MESSAGE: "&aStaff Modules enabled"
+      DISABLE-MESSAGE: "&cStaff Modules disabled"
 
 BOOLEANS:
   INVCLICK: true
