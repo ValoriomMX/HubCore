@@ -6,7 +6,7 @@ import es.hulk.addons.utils.command.CommandArgs;
 
 public class DebugCMD extends BaseCommand {
 
-    @Command(name = "debugcmd", permission = "need.to.be.opped")
+    @Command(name = "debugcmd", permission = "need.to.be.opped", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {

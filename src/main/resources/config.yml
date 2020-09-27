@@ -4,15 +4,15 @@ INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
 
 FLY:
   ENABLED: true
-  TURNED-OFF: "&CFly has turned off"
-  TURNED-ON: "&aFly has turned on"
+  TURNED-OFF: "&7* &cYour flymode has been disabled"
+  TURNED-ON: "&7* &aYour flumode has been enabled"
 
 LUNARCLIENT:
   STAFFMODULES:
     ENABLE-ON-JOIN: true
     COMMAND:
-      ENABLE-MESSAGE: "&aStaff Modules enabled"
-      DISABLE-MESSAGE: "&cStaff Modules disabled"
+      ENABLE-MESSAGE: "&8[&bLunarClient&8] &7Your Staff-Modules has been enabled."
+      DISABLE-MESSAGE: "&8[&bLunarClient&8] &7Your Staff-Modules has been disabled."
 
 BOOLEANS:
   INVCLICK: true
@@ -52,3 +52,11 @@ DEFAULT-QUIT-MESSAGE:
 LINKS-ITEM:
   MESSAGE:
     - "&6Twitter: &f@InfinityHvlk"
+
+ONLINE-SERVERS:
+  - "&7&m------------------------------------------------"
+  - "&a&lAvailable Servers"
+  - ""
+  - "&7* &aHCF"
+  - "&7* &AKitmap"
+  - "&7&m------------------------------------------------"

@@ -20,7 +20,7 @@ public class HelpCMD extends BaseCommand {
         p.sendMessage(Utils.color(" "));
         p.sendMessage(Utils.color("&a/fly &7- &fflymode for donators"));
         p.sendMessage(Utils.color("&a/joinqueue <server> &7- &fjoins the queue of a server"));
-        p.sendMessage(Utils.color("&a/servers &7- &fsee the server you can queue for &4&l[TODO]"));
+        p.sendMessage(Utils.color("&a/servers &7- &fsee the server you can queue for"));
         p.sendMessage(Utils.color("&a/help &7- &fShows this help"));
         p.sendMessage(Utils.color("&a/lunarclient &7- &fsee the people who has lunar client"));
         p.sendMessage(CC.CHAT_BAR);

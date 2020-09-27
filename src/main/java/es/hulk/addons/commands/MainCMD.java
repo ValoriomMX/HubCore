@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MainCMD extends BaseCommand {
 
-    @Command(name = "hubaddons", permission = "hubaddons.admin")
+    @Command(name = "hubaddons", permission = "hubaddons.admin", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {

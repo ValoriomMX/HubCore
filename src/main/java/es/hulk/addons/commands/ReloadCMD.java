@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 public class ReloadCMD extends BaseCommand {
 
 
-    @Command(name = "hubaddons.reload", permission = "hubaddons.command.reloadconfig", aliases = {"hubaddons.reloadconfigs"})
+    @Command(name = "hubaddons.reload", permission = "hubaddons.command.reloadconfig", aliases = {"hubaddons.reloadconfigs"}, noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {

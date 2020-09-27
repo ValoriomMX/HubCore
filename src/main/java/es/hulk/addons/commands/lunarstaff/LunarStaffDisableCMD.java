@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 public class LunarStaffDisableCMD extends BaseCommand {
 
-    @Command(name = "lunarstaff.disable", permission = "hubaddons.admin.lunarstaff")
+    @Command(name = "lunarstaff.disable", permission = "hubaddons.admin.lunarstaff", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {

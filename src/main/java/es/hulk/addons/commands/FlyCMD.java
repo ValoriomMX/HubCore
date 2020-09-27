@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 public class FlyCMD extends BaseCommand {
 
-    @Command(name = "fly", aliases = "flymode", permission = "addons.command.fly")
+    @Command(name = "fly", aliases = "flymode", permission = "addons.command.fly", noPerm = "&cBuy rank to have access to this feature")
 
     @Override
     public void onCommand(CommandArgs cmd) {
