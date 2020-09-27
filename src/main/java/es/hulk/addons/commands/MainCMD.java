@@ -23,6 +23,7 @@ public class MainCMD extends BaseCommand {
         p.sendMessage(Utils.color(" "));
         p.sendMessage(Utils.color("&a/hubaddons reload &7- &freloads the config"));
         p.sendMessage(Utils.color("&a/lunarstaff &7- &fopens a help for lunarstaff command"));
+        p.sendMessage(Utils.color("&a/heal &7- &fheal the player"));
         p.sendMessage(CC.CHAT_BAR);
     }
 

@@ -14,21 +14,19 @@ public class FlyCMD extends BaseCommand {
     @Override
     public void onCommand(CommandArgs cmd) {
         if (HubAddons.getInstance().getConfig().getBoolean("FLY.ENABLED")) {
-                Player p = cmd.getPlayer();
+            Player p = cmd.getPlayer();
 
-                if (p.hasPermission("hulk.command.fly")) {
-                    if (p.getAllowFlight()) {
-                        p.setAllowFlight(false);
-                        p.setFlying(false);
-                        p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-OFF")));
-                    } else {
-                        p.setAllowFlight(true);
-                        p.setFlying(true);
-                        p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-ON")));
-                    }
+            if (p.hasPermission("hulk.command.fly")) {
+                if (p.getAllowFlight()) {
+                    p.setAllowFlight(false);
+                    p.setFlying(false);
+                    p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-OFF")));
                 } else {
-                    p.sendMessage(Utils.color(Utils.stringConfig("INSUFICIENT-PERMISSIONS")));
+                    p.setAllowFlight(true);
+                    p.setFlying(true);
+                    p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-ON")));
                 }
             }
+        }
     }
 }

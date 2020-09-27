@@ -1,4 +1,4 @@
-LICENSE-KEY: YMSfXOBJttKzIyO5nDormtbSc
+LICENSE-KEY: jMadg5HQ9sl9xPiuN9CVJ4kNu
 
 INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
 
@@ -6,6 +6,13 @@ FLY:
   ENABLED: true
   TURNED-OFF: "&7* &cYour flymode has been disabled"
   TURNED-ON: "&7* &aYour flumode has been enabled"
+
+HEAL-COMMAND:
+  MESSAGE: "&aYou have been healed"
+
+FEED-COMMAND:
+  MESSAGE: "&aYou have been fed"
+
 
 LUNARCLIENT:
   STAFFMODULES:
@@ -38,7 +45,7 @@ JOIN-MESSAGE:
     - "&aWelcome %player_name%"
 
 CHAT-FORMAT:
-  ENABLED: false
+  ENABLED: true
   FORMAT: "%player_name% &8» &r<message>"
 
 DEFAULT-JOIN-MESSAGE:
