@@ -28,12 +28,15 @@ D:\intellij idea\HubCore\src\main\java\es\hulk\addons\inventory\HubServerInv.jav
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\events\AssembleBoardCreateEvent.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\FlyCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\lunarstaff\LunarStaffEnableCMD.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\HealCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\events\AssembleBoardDestroyEvent.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\FeedCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\AssembleStyle.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\HubAddons.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\LunarClientCommand.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\MainCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\scoreboard\ScoreBoard.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\ServersCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\AssembleAdapter.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\events\Booleans.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\Assemble.java

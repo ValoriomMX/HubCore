@@ -4,6 +4,10 @@ import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import es.hulk.addons.commands.*;
+import es.hulk.addons.commands.gamemode.AdventureCMD;
+import es.hulk.addons.commands.gamemode.CreativeCMD;
+import es.hulk.addons.commands.gamemode.GamemodeCMD;
+import es.hulk.addons.commands.gamemode.SurvivalCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffDisableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffEnableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffMainCMD;
@@ -122,6 +126,11 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         commandFramework.registerCommands(new LunarStaffMainCMD());
         commandFramework.registerCommands(new LunarStaffDisableCMD());
         commandFramework.registerCommands(new LunarStaffEnableCMD());
+
+        commandFramework.registerCommands(new GamemodeCMD());
+        commandFramework.registerCommands(new SurvivalCMD());
+        commandFramework.registerCommands(new CreativeCMD());
+        commandFramework.registerCommands(new AdventureCMD());
     }
 
     public void registerEvents() {
