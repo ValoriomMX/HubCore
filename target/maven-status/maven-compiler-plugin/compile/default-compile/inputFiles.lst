@@ -6,6 +6,8 @@ D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\AssembleBoardE
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\command\CommandFramework.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\events\Interact.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\command\CommandArgs.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\lunarstaff\LunarStaffDisableCMD.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\lunarstaff\LunarStaffMainCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\Utils.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\command\BukkitCommand.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\command\BukkitCompleter.java
@@ -25,8 +27,10 @@ D:\intellij idea\HubCore\src\main\java\es\hulk\addons\events\Quit.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\inventory\HubServerInv.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\events\AssembleBoardCreateEvent.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\FlyCMD.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\lunarstaff\LunarStaffEnableCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\events\AssembleBoardDestroyEvent.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\AssembleStyle.java
+D:\intellij idea\HubCore\src\main\java\es\hulk\addons\HubAddons.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\LunarClientCommand.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\MainCMD.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\scoreboard\ScoreBoard.java
@@ -35,4 +39,3 @@ D:\intellij idea\HubCore\src\main\java\es\hulk\addons\events\Booleans.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\Assemble.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\utils\board\AssembleListener.java
 D:\intellij idea\HubCore\src\main\java\es\hulk\addons\commands\HelpCMD.java
-D:\intellij idea\HubCore\src\main\java\es\hulk\addons\main\Main.java

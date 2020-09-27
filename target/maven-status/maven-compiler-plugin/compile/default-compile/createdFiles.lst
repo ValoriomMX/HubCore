@@ -1,13 +1,14 @@
+es\hulk\addons\commands\lunarstaff\LunarStaffDisableCMD.class
 es\hulk\addons\utils\command\Command.class
 es\hulk\addons\utils\Utils.class
 es\hulk\addons\events\Chat.class
 es\hulk\addons\utils\board\events\AssembleBoardCreatedEvent.class
 es\hulk\addons\utils\board\events\AssembleBoardDestroyEvent.class
+es\hulk\addons\commands\lunarstaff\LunarStaffMainCMD.class
 es\hulk\addons\utils\command\BaseCommand.class
 es\hulk\addons\inventory\HubServerInv.class
 es\hulk\addons\utils\board\AssembleBoard.class
 es\hulk\addons\utils\InventoryMaker.class
-es\hulk\addons\main\Main.class
 es\hulk\addons\utils\board\events\AssembleBoardCreateEvent.class
 es\hulk\addons\inventory\SelectorInv.class
 es\hulk\addons\utils\board\AssembleThread.class
@@ -28,6 +29,8 @@ es\hulk\addons\utils\command\BukkitCommand.class
 es\hulk\addons\utils\CC.class
 es\hulk\addons\commands\MainCMD.class
 es\hulk\addons\utils\command\Completer.class
+es\hulk\addons\commands\lunarstaff\LunarStaffEnableCMD.class
+es\hulk\addons\HubAddons.class
 es\hulk\addons\inventory\InvClickEvent.class
 es\hulk\addons\scoreboard\ScoreBoard.class
 es\hulk\addons\utils\command\CommandFramework.class

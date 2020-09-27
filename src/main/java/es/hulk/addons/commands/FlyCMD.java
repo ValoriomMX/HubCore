@@ -1,26 +1,30 @@
 package es.hulk.addons.commands;
 
+import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
-import es.hulk.addons.main.Main;
+import es.hulk.addons.utils.command.BaseCommand;
+import es.hulk.addons.utils.command.Command;
+import es.hulk.addons.utils.command.CommandArgs;
 import org.bukkit.entity.Player;
-import org.imanity.framework.bukkit.command.Command;
 
-public class FlyCMD {
+public class FlyCMD extends BaseCommand {
 
-    @Command(names = {"fly", "flymode"}, permissionNode = "hubaddons.command.fly")
+    @Command(name = "fly", aliases = "flymode", permission = "addons.command.fly")
 
-    public void flycmd(Player p) {
-        if (Main.getInstance().getConfig().getBoolean("FLY.ENABLED")) {
+    @Override
+    public void onCommand(CommandArgs cmd) {
+        if (HubAddons.getInstance().getConfig().getBoolean("FLY.ENABLED")) {
+                Player p = cmd.getPlayer();
 
                 if (p.hasPermission("hulk.command.fly")) {
                     if (p.getAllowFlight()) {
                         p.setAllowFlight(false);
                         p.setFlying(false);
-                        p.sendMessage(Utils.color(Main.getInstance().getConfig().getString("FLY.TURNED-OFF")));
+                        p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-OFF")));
                     } else {
                         p.setAllowFlight(true);
                         p.setFlying(true);
-                        p.sendMessage(Utils.color(Main.getInstance().getConfig().getString("FLY.TURNED-ON")));
+                        p.sendMessage(Utils.color(HubAddons.getInstance().getConfig().getString("FLY.TURNED-ON")));
                     }
                 } else {
                     p.sendMessage(Utils.color(Utils.stringConfig("INSUFICIENT-PERMISSIONS")));

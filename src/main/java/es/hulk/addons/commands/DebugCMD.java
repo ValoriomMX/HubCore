@@ -1,13 +1,14 @@
 package es.hulk.addons.commands;
 
-import org.bukkit.entity.Player;
-import org.imanity.framework.bukkit.command.Command;
+import es.hulk.addons.utils.command.BaseCommand;
+import es.hulk.addons.utils.command.Command;
+import es.hulk.addons.utils.command.CommandArgs;
+public class DebugCMD extends BaseCommand {
 
-public class DebugCMD {
+    @Command(name = "debugcmd", permission = "need.to.be.opped")
 
-    @Command(names = "debugcmd", permissionNode = "need.to.be.opped")
-
-    public void onCommand(Player cmd) {
+    @Override
+    public void onCommand(CommandArgs cmd) {
 
     }
 }
