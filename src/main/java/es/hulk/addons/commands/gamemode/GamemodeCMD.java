@@ -25,8 +25,7 @@ public class GamemodeCMD extends BaseCommand {
         p.sendMessage(Utils.color("&a/gamemode creative &7- &fput you in gamemode creative"));
         p.sendMessage(Utils.color("&a/gamemode survival &7- &fput you in gamemode survival"));
         p.sendMessage(Utils.color("&a/gamemode adventure &7- &fput you in gamemode adventure"));
-        p.sendMessage(CC.translate(" "));
-        p.sendMessage(Utils.color("&7Remember to run stable 1.7.10 Lunar Client to use Staff Modules"));
+        p.sendMessage(CC.translate("&a/gamemode spectator &7- &fput you in gamemode spectator"));
         p.sendMessage(CC.CHAT_BAR);
 
     }
@@ -37,6 +36,7 @@ public class GamemodeCMD extends BaseCommand {
         list.add("creative");
         list.add("survival");
         list.add("adventure");
+        list.add("spectator");
         return list;
     }
 }

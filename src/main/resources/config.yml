@@ -17,6 +17,7 @@ GAMEMODE:
   CREATIVE: "&aGamemode creative"
   SURVIVAL: "&aGamemode survival"
   ADVENTURE: "&aGamemode adventure"
+  SPECTATOR: "&aGamemode spectator"
 
 LUNARCLIENT:
   STAFFMODULES:
