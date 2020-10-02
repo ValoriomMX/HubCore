@@ -8,11 +8,14 @@ import es.hulk.addons.commands.gamemode.*;
 import es.hulk.addons.commands.lunarstaff.LunarStaffDisableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffEnableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffMainCMD;
+import es.hulk.addons.scoreboard.ScoreBoard;
 import es.hulk.addons.utils.License;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
+import es.hulk.addons.utils.board.Assemble;
+import es.hulk.addons.utils.board.AssembleStyle;
 import es.hulk.addons.utils.command.CommandFramework;
 import lombok.Getter;
 import org.bukkit.Bukkit;
@@ -72,9 +75,9 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
             this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
             this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
 
-            /*Assemble assemble = new Assemble(this, new ScoreBoard());
+            Assemble assemble = new Assemble(this, new ScoreBoard());
             assemble.setTicks(2L);
-            assemble.setAssembleStyle(AssembleStyle.MODERN);*/
+            assemble.setAssembleStyle(AssembleStyle.MODERN);
 
             //new ImanityTabHandler(new Tabulator());
 
