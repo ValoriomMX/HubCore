@@ -1,0 +1,76 @@
+SERVER-SELECTOR:
+  TITLE: "&3Server Selector"
+  ROWS: 3
+  OPEN-INVENTORY: "&3Opening Server Selector"
+  ITEMS:
+    HCF:
+      NAME: "&3HCF &7(Right Click)"
+      ITEM: "POTION"
+      DATA: 16421
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:897%"
+        - "&7» &3Players &8» &f%bungee_HCF%/&f%pinger_max_192.168.0.240:897%"
+        - ""
+      SERVER: "HCF"
+      SLOT: 15
+    Practice:
+      NAME: "&3Practice &7(Right Click)"
+      ITEM: "LAVA_BUCKET"
+      DATA: 0
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:987%"
+        - "&7» &3Players &8» &f%bungee_Practice%/&f%pinger_max_192.168.0.240:987%"
+        - ""
+      SERVER: "Practice"
+      SLOT: 14
+    SkyWars:
+      NAME: "&3SkyWars &7(Right Click)"
+      ITEM: "BOW"
+      DATA: 0
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:154%"
+        - "&7» &3Players &8» &f%bungee_SkyWars%/&f%pinger_max_192.168.0.240:154%"
+        - ""
+      SERVER: "SkyWars"
+      SLOT: 10
+    Survival:
+      NAME: "&3Survival 1.16.1 &7(Right Click)"
+      ITEM: "GRASS"
+      DATA: 0
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:786%"
+        - "&7» &3Players &8» &f%bungee_Practice%/&f%pinger_max_192.168.0.240:786%"
+        - ""
+      SERVER: "Survival"
+      SLOT: 11
+
+HUB-SELECTOR:
+  TITLE: "&3Hub Selector"
+  ROWS: 3
+  ITEMS:
+    Hub-1:
+      NAME: "&3Hub-1 &7(Right Click)"
+      ITEM: "IRON_DOOR"
+      DATA: 0
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:25566%"
+        - "&7» &3Players &8» &f%bungee_Hub-1%/&f%pinger_max_192.168.0.240:25566%"
+        - ""
+      SERVER: "Hub-1"
+      SLOT: 10
+    Hub-2:
+      NAME: "&3Hub-2 &7(Right Click)"
+      ITEM: "IRON_DOOR"
+      DATA: 0
+      LORE:
+        - ""
+        - "&7» &3Status &8» &r%pinger_isonline_192.168.0.240:25564%"
+        - "&7» &3Players &8» &f%bungee_Hub-2%/&f%pinger_max_192.168.0.240:25564%"
+        - ""
+      SERVER: "Hub-2"
+      SLOT: 11
