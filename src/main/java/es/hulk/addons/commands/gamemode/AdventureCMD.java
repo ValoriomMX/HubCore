@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 public class AdventureCMD extends BaseCommand {
 
-    @Command(name = "gamemode.adventure", aliases = "adventure", permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
+    @Command(name = "gamemode.adventure", aliases = {"adventure", "2"}, permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {
