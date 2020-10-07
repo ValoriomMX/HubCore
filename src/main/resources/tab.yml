@@ -1,6 +1,6 @@
 TAB:
-  HEADER: "%player_name% is retareded"
-  FOOTER: "%player_name%'s ping: %player_pingms"
+  HEADER: ""
+  FOOTER: ""
   LEFT:
     1: ""
     2: ""
