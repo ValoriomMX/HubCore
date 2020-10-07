@@ -5,7 +5,7 @@ INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
 FLY:
   ENABLED: true
   TURNED-OFF: "&7* &cYour flymode has been disabled"
-  TURNED-ON: "&7* &aYour flumode has been enabled"
+  TURNED-ON: "&7* &aYour flymode has been enabled"
 
 HEAL-COMMAND:
   MESSAGE: "&aYou have been healed"

@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 public class CreativeCMD extends BaseCommand {
 
-    @Command(name = "gamemode.creative", aliases = {"creative", "1"}, permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
+    @Command(name = "gamemode.creative", aliases = {"creative", "gamemode.1"}, permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {

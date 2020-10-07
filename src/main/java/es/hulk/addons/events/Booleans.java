@@ -28,6 +28,17 @@ public class Booleans implements Listener {
     }
 
     @EventHandler
+    public void InvCreativeMoveEvent(InventoryCreativeEvent e) {
+        Player p = (Player) e.getWhoClicked();
+        if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.INVCLICK")) {
+            e.setCancelled(true);
+            p.updateInventory();
+        } else {
+            e.setCancelled(false);
+        }
+    }
+
+    @EventHandler
     public void InvDragEvent(InventoryDragEvent e) {
         Player p = (Player) e.getWhoClicked();
         if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.INVDRAG")) {

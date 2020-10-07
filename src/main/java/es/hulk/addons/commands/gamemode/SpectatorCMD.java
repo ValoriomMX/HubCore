@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 public class SpectatorCMD extends BaseCommand {
 
-    @Command(name = "gamemode.spectator", aliases = {"spectator", "3"}, permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
+    @Command(name = "gamemode.spectator", aliases = {"spectator", "gamemode.3"}, permission = "hubaddons.admin.gamemode", noPerm = "&cNo Permission")
 
     @Override
     public void onCommand(CommandArgs cmd) {
