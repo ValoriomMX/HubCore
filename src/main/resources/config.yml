@@ -1,0 +1,75 @@
+LICENSE-KEY: jMadg5HQ9sl9xPiuN9CVJ4kNu
+
+INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
+
+FLY:
+  ENABLED: true
+  TURNED-OFF: "&7* &cYour flymode has been disabled"
+  TURNED-ON: "&7* &aYour flumode has been enabled"
+
+HEAL-COMMAND:
+  MESSAGE: "&aYou have been healed"
+
+FEED-COMMAND:
+  MESSAGE: "&aYou have been fed"
+
+GAMEMODE:
+  CREATIVE: "&aGamemode creative"
+  SURVIVAL: "&aGamemode survival"
+  ADVENTURE: "&aGamemode adventure"
+  SPECTATOR: "&aGamemode spectator"
+
+LUNARCLIENT:
+  STAFFMODULES:
+    ENABLE-ON-JOIN: true
+    COMMAND:
+      ENABLE-MESSAGE: "&8[&bLunarClient&8] &7Your Staff-Modules has been enabled."
+      DISABLE-MESSAGE: "&8[&bLunarClient&8] &7Your Staff-Modules has been disabled."
+
+BOOLEANS:
+  INVCLICK: true
+  CLEARINV-ON-JOIN: true
+  INVDRAG: true
+  DROPITEMS: true
+  FOOD-LEVEL-CHANGE: true
+  BLOCKPLACE:
+    ENABLED: true
+    MESSAGE: "&CYou cannot place blocks here"
+  BLOCKBREAK:
+    ENABLED: true
+    MESSAGE: "&cYou cannot break blocks here"
+  FOOTER:
+    ENABLED: true
+    MESSAGE: "footer"
+  HEADER:
+    ENABLED: true
+    MESSAGE: "header"
+
+JOIN-MESSAGE:
+  ENABLED: true
+  MESSAGE:
+    - "&aWelcome %player_name%"
+
+CHAT-FORMAT:
+  ENABLED: true
+  FORMAT: "%player_name% &8» &r<message>"
+
+DEFAULT-JOIN-MESSAGE:
+  ENABLED: false
+  MESSAGE: ""
+
+DEFAULT-QUIT-MESSAGE:
+  ENABLED: false
+  MESSAGE: ""
+
+LINKS-ITEM:
+  MESSAGE:
+    - "&6Twitter: &f@InfinityHvlk"
+
+ONLINE-SERVERS:
+  - "&7&m------------------------------------------------"
+  - "&a&lAvailable Servers"
+  - ""
+  - "&7* &aHCF"
+  - "&7* &AKitmap"
+  - "&7&m------------------------------------------------"

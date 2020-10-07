@@ -1,0 +1,9 @@
+name: HubAddons
+author: Hulk
+main: es.hulk.addons.HubAddons
+version: 1.0
+load: POSTWORLD
+loadbefore:
+  - AquaCore
+
+depend: [PlaceholderAPI, LunarClient-API]
