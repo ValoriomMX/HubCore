@@ -19,6 +19,7 @@ public class ReloadCMD extends BaseCommand {
         HubAddons.getInstance().createMenusConfig();
         HubAddons.getInstance().createItemsConfig();
         HubAddons.getInstance().createScoreboardConfig();
+        HubAddons.getInstance().createTabConfig();
         p.sendMessage(Utils.color("&aReload has been succsesfully done"));
     }
 }

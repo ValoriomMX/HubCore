@@ -57,8 +57,8 @@ public class Tabulator implements Listener, ITablist {
                 new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.LEFT.20"), 20),
 
                 //EL MEDIO DEL TAB
-                new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.1"), 20),
-                new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.2"), 21),
+                new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.1"), 21),
+                new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.2"), 22),
                 new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.3"), 23),
                 new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.4"), 24),
                 new TablistElement(HubAddons.getInstance().getTabConfig().getString("TAB.MIDDLE.5"), 25),

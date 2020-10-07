@@ -31,6 +31,7 @@ BOOLEANS:
   CLEARINV-ON-JOIN: true
   INVDRAG: true
   DROPITEMS: true
+  FOOD-LEVEL-CHANGE: true
   BLOCKPLACE:
     ENABLED: true
     MESSAGE: "&CYou cannot place blocks here"
