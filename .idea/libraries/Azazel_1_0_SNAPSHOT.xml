@@ -2,6 +2,7 @@
   <library name="Azazel-1.0-SNAPSHOT">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/librerias/Azazel-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/librerias/OutlastTablist-1.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

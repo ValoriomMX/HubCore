@@ -13,6 +13,11 @@ HEAL-COMMAND:
 FEED-COMMAND:
   MESSAGE: "&aYou have been fed"
 
+GAMEMODE:
+  CREATIVE: "&aGamemode creative"
+  SURVIVAL: "&aGamemode survival"
+  ADVENTURE: "&aGamemode adventure"
+  SPECTATOR: "&aGamemode spectator"
 
 LUNARCLIENT:
   STAFFMODULES:

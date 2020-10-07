@@ -1,5 +1,6 @@
 package es.hulk.addons;
 
+import cc.outlast.tablist.OutlastTab;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -9,6 +10,7 @@ import es.hulk.addons.commands.lunarstaff.LunarStaffDisableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffEnableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffMainCMD;
 import es.hulk.addons.scoreboard.ScoreBoard;
+import es.hulk.addons.tab.Tabulator;
 import es.hulk.addons.utils.License;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
@@ -58,7 +60,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         createScoreboardConfig();
         createItemsConfig();
         createMenusConfig();
-        //createTabConfig();
+        createTabConfig();
 
         Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
         License license = new License(getConfig().getString("LICENSE-KEY"), "https://pluginslicenses.000webhostapp.com", this);
@@ -79,7 +81,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
             assemble.setTicks(2L);
             assemble.setAssembleStyle(AssembleStyle.MODERN);
 
-            //new ImanityTabHandler(new Tabulator());
+            new OutlastTab(this, new Tabulator(), 40L); //40L = 2s delay per reload
 
             registerEvents();
             registerCMDs();
@@ -145,6 +147,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
             Bukkit.getPluginManager().registerEvents(new HubServerInv(), this);
             Bukkit.getPluginManager().registerEvents(new Chat(), this);
             Bukkit.getPluginManager().registerEvents(new Booleans(), this);
+            Bukkit.getPluginManager().registerEvents(new Tabulator(), this);
         } else {
             throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
         }

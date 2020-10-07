@@ -7,18 +7,21 @@ es\hulk\addons\tab\Tabulator.class
 es\hulk\addons\commands\ReloadCMD.class
 es\hulk\addons\events\Join.class
 es\hulk\addons\utils\board\AssembleListener.class
+es\hulk\addons\commands\gamemode\AdventureCMD.class
 es\hulk\addons\utils\command\CommandArgs.class
 es\hulk\addons\utils\board\Assemble.class
 es\hulk\addons\commands\FlyCMD.class
 es\hulk\addons\utils\License$ReturnType.class
 es\hulk\addons\commands\LunarClientCommand.class
 es\hulk\addons\events\Interact.class
+es\hulk\addons\commands\gamemode\GamemodeCMD.class
 es\hulk\addons\commands\DebugCMD.class
 es\hulk\addons\utils\board\AssembleStyle.class
 es\hulk\addons\utils\command\BukkitCommand.class
 es\hulk\addons\HubAddons.class
 es\hulk\addons\utils\command\CommandFramework.class
 es\hulk\addons\utils\command\BukkitCompleter.class
+es\hulk\addons\commands\gamemode\SurvivalCMD.class
 es\hulk\addons\events\Quit.class
 es\hulk\addons\commands\HealCMD.class
 es\hulk\addons\utils\board\AssembleAdapter.class
@@ -32,6 +35,7 @@ es\hulk\addons\inventory\HubServerInv.class
 es\hulk\addons\utils\board\events\AssembleBoardCreateEvent.class
 es\hulk\addons\utils\board\AssembleThread.class
 es\hulk\addons\commands\ServersCMD.class
+es\hulk\addons\commands\gamemode\CreativeCMD.class
 es\hulk\addons\events\Join$1.class
 es\hulk\addons\utils\CC.class
 es\hulk\addons\commands\MainCMD.class
@@ -41,6 +45,7 @@ es\hulk\addons\inventory\InvClickEvent.class
 es\hulk\addons\commands\FeedCMD.class
 es\hulk\addons\scoreboard\ScoreBoard.class
 es\hulk\addons\events\Booleans.class
+es\hulk\addons\commands\gamemode\SpectatorCMD.class
 es\hulk\addons\utils\board\AssembleBoardEntry.class
 es\hulk\addons\utils\License.class
 es\hulk\addons\commands\HelpCMD.class

@@ -58,11 +58,11 @@ public class Join implements Listener {
             @Override
             public void run() {
                 if (HubAddons.getInstance().getItemsConfig().getBoolean("SERVER-SELECTOR-ITEM.ENABLED")) {
-                        ItemStack selitem = new ItemStack(Material.getMaterial(HubAddons.getInstance().getItemsConfig().getString("SERVER-SELECTOR-ITEM.MATERIAL")), HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.AMOUNT"), (short) HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.DATA"));
-                        ItemMeta brujulaMeta = selitem.getItemMeta();
-                        brujulaMeta.setDisplayName(Utils.color(HubAddons.getInstance().getItemsConfig().getString("SERVER-SELECTOR-ITEM.DISPLAYNAME")));
-                        selitem.setItemMeta(brujulaMeta);
-                        p.getInventory().setItem(HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.SLOT"), selitem);
+                    ItemStack selitem = new ItemStack(Material.getMaterial(HubAddons.getInstance().getItemsConfig().getString("SERVER-SELECTOR-ITEM.MATERIAL")), HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.AMOUNT"), (short) HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.DATA"));
+                    ItemMeta brujulaMeta = selitem.getItemMeta();
+                    brujulaMeta.setDisplayName(Utils.color(HubAddons.getInstance().getItemsConfig().getString("SERVER-SELECTOR-ITEM.DISPLAYNAME")));
+                    selitem.setItemMeta(brujulaMeta);
+                    p.getInventory().setItem(HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.SLOT"), selitem);
                 }
                 if (HubAddons.getInstance().getItemsConfig().getBoolean("LINKS-ITEM.ENABLED")) {
                     ItemStack selitem = new ItemStack(Material.getMaterial(HubAddons.getInstance().getItemsConfig().getString("LINKS-ITEM.MATERIAL")), HubAddons.getInstance().getItemsConfig().getInt("LINKS-ITEM.AMOUNT"), (short) HubAddons.getInstance().getItemsConfig().getInt("LINKS-ITEM.DATA"));
