@@ -1,6 +1,5 @@
 package es.hulk.addons.events;
 
-import com.avaje.ebean.annotation.EmbeddedColumns;
 import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import org.bukkit.entity.Player;
@@ -22,8 +21,6 @@ public class Booleans implements Listener {
         if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.INVCLICK")) {
             e.setCancelled(true);
             p.updateInventory();
-        } else {
-            e.setCancelled(false);
         }
     }
 

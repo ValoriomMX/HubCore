@@ -16,9 +16,9 @@ import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
-import es.hulk.addons.utils.board.Assemble;
-import es.hulk.addons.utils.board.AssembleStyle;
 import es.hulk.addons.utils.command.CommandFramework;
+import io.github.thatkawaiisam.assemble.Assemble;
+import io.github.thatkawaiisam.assemble.AssembleStyle;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -61,25 +61,24 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         createItemsConfig();
         createMenusConfig();
         createTabConfig();
-
-        Bukkit.getServer().getConsoleSender().sendMessage("-------> Login <-------");
+        Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
+        Bukkit.getServer().getConsoleSender().sendMessage("§eLICENSE SYSTEM");
+        Bukkit.getServer().getConsoleSender().sendMessage("");
         License license = new License(getConfig().getString("LICENSE-KEY"), "https://pluginslicenses.000webhostapp.com", this);
         license.request();
-        Bukkit.getServer().getConsoleSender().sendMessage("License checking: " + license.getLicense());
-
-
         if (license.isValid()) {
-            Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
-            Bukkit.getServer().getConsoleSender().sendMessage("Login accepted");
-            Bukkit.getServer().getConsoleSender().sendMessage("Welcome: " + license.getLicensedTo());
+            Bukkit.getServer().getConsoleSender().sendMessage("§aLogin accepted");
+            Bukkit.getServer().getConsoleSender().sendMessage("§aWelcome: " + license.getLicensedTo());
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
 
             this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
             this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
 
-            Assemble assemble = new Assemble(this, new ScoreBoard());
-            assemble.setTicks(2L);
-            assemble.setAssembleStyle(AssembleStyle.MODERN);
+            if(getScoreboardConfig().getBoolean("SCOREBOARD.ENABLED")) {
+                Assemble assemble = new Assemble(this, new ScoreBoard());
+                assemble.setTicks(2L);
+                assemble.setAssembleStyle(AssembleStyle.MODERN);
+            }
 
             new OutlastTab(this, new Tabulator(), 40L); //40L = 2s delay per reload
 
@@ -87,9 +86,11 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
             registerCMDs();
 
         } else {
-            Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
-            Bukkit.getServer().getConsoleSender().sendMessage("Login denied");
+            Bukkit.getServer().getConsoleSender().sendMessage("§cLogin denied");
             Bukkit.getServer().getConsoleSender().sendMessage("§cDisabling plugin");
+            Bukkit.getServer().getConsoleSender().sendMessage("");
+            Bukkit.getServer().getConsoleSender().sendMessage("§eContact the developer on discord Hulk#0226 if this is an error");
+            Bukkit.getServer().getConsoleSender().sendMessage("");
             Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
 
             Bukkit.getPluginManager().disablePlugin(this);
@@ -190,7 +191,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     }
 
     public FileConfiguration getItemsConfig() {
-        return this.itemsConfig;
+        return itemsConfig;
     }
 
     public void createItemsConfig() {

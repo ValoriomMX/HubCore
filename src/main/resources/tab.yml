@@ -1,6 +1,5 @@
 TAB:
-  HEADER: ""
-  FOOTER: ""
+  ENABLED: true
   LEFT:
     1: ""
     2: ""

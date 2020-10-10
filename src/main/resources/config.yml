@@ -1,4 +1,4 @@
-LICENSE-KEY: jMadg5HQ9sl9xPiuN9CVJ4kNu
+LICENSE-KEY: ""
 
 INSUFICIENT-PERMISSIONS: "&aYou need to buy rank to have acces to that feature"
 
@@ -45,6 +45,10 @@ BOOLEANS:
     ENABLED: true
     MESSAGE: "header"
 
+TAB:
+  HEADER: ""
+  FOOTER: ""
+
 JOIN-MESSAGE:
   ENABLED: true
   MESSAGE:
@@ -68,8 +72,11 @@ LINKS-ITEM:
 
 ONLINE-SERVERS:
   - "&7&m------------------------------------------------"
-  - "&a&lAvailable Servers"
+  - "&a&lAll Servers"
+  - ""
+  - "&aONLINE"
+  - "&COFFLINE"
   - ""
   - "&7* &aHCF"
-  - "&7* &AKitmap"
+  - "&7* &cKitmap"
   - "&7&m------------------------------------------------"
