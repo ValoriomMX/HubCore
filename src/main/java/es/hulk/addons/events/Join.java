@@ -4,6 +4,7 @@ import com.lunarclient.bukkitapi.LunarClientAPI;
 import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import me.clip.placeholderapi.PlaceholderAPI;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,6 +12,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class Join implements Listener {
@@ -20,6 +23,10 @@ public class Join implements Listener {
     @EventHandler
     public void JoinEvent(PlayerJoinEvent e) {
         Player p = e.getPlayer();
+
+        for (Player player: Bukkit.getOnlinePlayers()) {
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000000, 3));
+        }
 
         if (p.hasPermission("LUNARCLIENT.STAFFMODULES.ENABLE-ON-JOIN")) {
             lunarClientAPI.giveAllStaffModules(p);

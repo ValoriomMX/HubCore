@@ -1,6 +1,5 @@
 package es.hulk.addons;
 
-import cc.outlast.tablist.OutlastTab;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -9,16 +8,11 @@ import es.hulk.addons.commands.gamemode.*;
 import es.hulk.addons.commands.lunarstaff.LunarStaffDisableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffEnableCMD;
 import es.hulk.addons.commands.lunarstaff.LunarStaffMainCMD;
-import es.hulk.addons.scoreboard.ScoreBoard;
-import es.hulk.addons.tab.Tabulator;
-import es.hulk.addons.utils.License;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
 import es.hulk.addons.utils.command.CommandFramework;
-import io.github.thatkawaiisam.assemble.Assemble;
-import io.github.thatkawaiisam.assemble.AssembleStyle;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -48,10 +42,12 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     private static int playercount = 0;
 
     private CommandFramework commandFramework;
-    @Getter public static HubAddons instance;
+    @Getter
+    public static HubAddons instance;
 
     @Override
     public void onEnable() {
+
         instance = this;
         commandFramework = new CommandFramework(this);
 
@@ -61,45 +57,18 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         createItemsConfig();
         createMenusConfig();
         createTabConfig();
-        Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
-        Bukkit.getServer().getConsoleSender().sendMessage("§eLICENSE SYSTEM");
-        Bukkit.getServer().getConsoleSender().sendMessage("");
-        License license = new License(getConfig().getString("LICENSE-KEY"), "https://pluginslicenses.000webhostapp.com", this);
-        license.request();
-        if (license.isValid()) {
-            Bukkit.getServer().getConsoleSender().sendMessage("§aLogin accepted");
-            Bukkit.getServer().getConsoleSender().sendMessage("§aWelcome: " + license.getLicensedTo());
-            Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
 
-            this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
-            this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
+        this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+        this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
 
-            if(getScoreboardConfig().getBoolean("SCOREBOARD.ENABLED")) {
-                Assemble assemble = new Assemble(this, new ScoreBoard());
-                assemble.setTicks(2L);
-                assemble.setAssembleStyle(AssembleStyle.MODERN);
-            }
+        registerEvents();
+        registerCMDs();
 
-            new OutlastTab(this, new Tabulator(), 40L); //40L = 2s delay per reload
-
-            registerEvents();
-            registerCMDs();
-
-        } else {
-            Bukkit.getServer().getConsoleSender().sendMessage("§cLogin denied");
-            Bukkit.getServer().getConsoleSender().sendMessage("§cDisabling plugin");
-            Bukkit.getServer().getConsoleSender().sendMessage("");
-            Bukkit.getServer().getConsoleSender().sendMessage("§eContact the developer on discord Hulk#0226 if this is an error");
-            Bukkit.getServer().getConsoleSender().sendMessage("");
-            Bukkit.getServer().getConsoleSender().sendMessage("------------------------");
-
-            Bukkit.getPluginManager().disablePlugin(this);
-            return;
-        }
     }
 
     @Override
-    public void onDisable() {}
+    public void onDisable() {
+    }
 
     public static HubAddons getInstance() {
         return instance;
@@ -148,7 +117,6 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
             Bukkit.getPluginManager().registerEvents(new HubServerInv(), this);
             Bukkit.getPluginManager().registerEvents(new Chat(), this);
             Bukkit.getPluginManager().registerEvents(new Booleans(), this);
-            Bukkit.getPluginManager().registerEvents(new Tabulator(), this);
         } else {
             throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
         }
