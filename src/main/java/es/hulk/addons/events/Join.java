@@ -28,11 +28,6 @@ public class Join implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000000, 3));
         }
 
-        if (p.hasPermission("LUNARCLIENT.STAFFMODULES.ENABLE-ON-JOIN")) {
-            lunarClientAPI.giveAllStaffModules(p);
-            p.sendMessage(Utils.color("&8[&bLunarClient&8] &7You have received all Staff-Modules. "));
-        }
-
         if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.CLEARINV-ON-JOIN")) {
             p.getInventory().clear();
             p.getInventory().setHelmet(null);

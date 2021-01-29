@@ -21,10 +21,7 @@
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.15" level="project" />
     <orderEntry type="library" name="Maven: net.md-5:bungeecord-chat:1.8-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.lunarclient:bukkitapi:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: me.clip:placeholderapi:2.10.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
-    <orderEntry type="library" name="Maven: cc.outlast:OutlastTablist:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: io.github.thatkawaiisam:assemble:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

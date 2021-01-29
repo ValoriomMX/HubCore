@@ -37,45 +37,12 @@
         </repository>
     </repositories>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <artifactSet>
-                                <includes>
-                                    <include>com.comphenix.tinyprotocol:*</include>
-                                    <include>cc.outlast:*</include>
-                                    <include>io.github.thatkawaiisam:*</include>
-                                </includes>
-                            </artifactSet>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.lunarclient</groupId>
-            <artifactId>bukkitapi</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
@@ -88,16 +55,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>cc.outlast</groupId>
-            <artifactId>OutlastTablist</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.thatkawaiisam</groupId>
-            <artifactId>assemble</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

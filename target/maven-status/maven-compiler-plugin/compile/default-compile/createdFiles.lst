@@ -8,7 +8,6 @@ es\hulk\addons\inventory\HubServerInv.class
 es\hulk\addons\utils\InventoryMaker.class
 es\hulk\addons\inventory\SelectorInv.class
 es\hulk\addons\commands\ServersCMD.class
-es\hulk\addons\tab\Tabulator.class
 es\hulk\addons\commands\gamemode\CreativeCMD.class
 es\hulk\addons\commands\ReloadCMD.class
 es\hulk\addons\events\Join.class
@@ -29,7 +28,6 @@ es\hulk\addons\commands\lunarstaff\LunarStaffEnableCMD.class
 es\hulk\addons\HubAddons.class
 es\hulk\addons\inventory\InvClickEvent.class
 es\hulk\addons\commands\FeedCMD.class
-es\hulk\addons\scoreboard\ScoreBoard.class
 es\hulk\addons\utils\command\CommandFramework.class
 es\hulk\addons\utils\command\BukkitCompleter.class
 es\hulk\addons\commands\gamemode\SurvivalCMD.class
