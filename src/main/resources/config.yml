@@ -27,6 +27,8 @@ LUNARCLIENT:
       DISABLE-MESSAGE: "&8[&bLunarClient&8] &7Your Staff-Modules has been disabled."
 
 BOOLEANS:
+  TAB: true
+  SCOREBOARD: true
   INVCLICK: true
   CLEARINV-ON-JOIN: true
   INVDRAG: true
