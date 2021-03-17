@@ -1,8 +1,6 @@
-es\hulk\addons\commands\lunarstaff\LunarStaffDisableCMD.class
 es\hulk\addons\utils\command\Command.class
 es\hulk\addons\utils\Utils.class
 es\hulk\addons\events\Chat.class
-es\hulk\addons\commands\lunarstaff\LunarStaffMainCMD.class
 es\hulk\addons\utils\command\BaseCommand.class
 es\hulk\addons\inventory\HubServerInv.class
 es\hulk\addons\utils\InventoryMaker.class
@@ -15,7 +13,7 @@ es\hulk\addons\commands\gamemode\AdventureCMD.class
 es\hulk\addons\utils\command\CommandArgs.class
 es\hulk\addons\commands\FlyCMD.class
 es\hulk\addons\utils\License$ReturnType.class
-es\hulk\addons\commands\LunarClientCommand.class
+es\hulk\addons\providers\ScoreboardProvider.class
 es\hulk\addons\events\Interact.class
 es\hulk\addons\commands\gamemode\GamemodeCMD.class
 es\hulk\addons\commands\DebugCMD.class
@@ -24,10 +22,10 @@ es\hulk\addons\utils\command\BukkitCommand.class
 es\hulk\addons\utils\CC.class
 es\hulk\addons\commands\MainCMD.class
 es\hulk\addons\utils\command\Completer.class
-es\hulk\addons\commands\lunarstaff\LunarStaffEnableCMD.class
 es\hulk\addons\HubAddons.class
 es\hulk\addons\inventory\InvClickEvent.class
 es\hulk\addons\commands\FeedCMD.class
+es\hulk\addons\providers\TablistProvider.class
 es\hulk\addons\utils\command\CommandFramework.class
 es\hulk\addons\utils\command\BukkitCompleter.class
 es\hulk\addons\commands\gamemode\SurvivalCMD.class

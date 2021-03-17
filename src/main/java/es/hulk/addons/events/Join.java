@@ -1,6 +1,5 @@
 package es.hulk.addons.events;
 
-import com.lunarclient.bukkitapi.LunarClientAPI;
 import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import me.clip.placeholderapi.PlaceholderAPI;
@@ -17,8 +16,6 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class Join implements Listener {
-
-    private final LunarClientAPI lunarClientAPI = LunarClientAPI.getInstance();
 
     @EventHandler
     public void JoinEvent(PlayerJoinEvent e) {

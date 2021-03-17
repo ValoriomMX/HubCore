@@ -5,9 +5,6 @@ import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import es.hulk.addons.commands.*;
 import es.hulk.addons.commands.gamemode.*;
-import es.hulk.addons.commands.lunarstaff.LunarStaffDisableCMD;
-import es.hulk.addons.commands.lunarstaff.LunarStaffEnableCMD;
-import es.hulk.addons.commands.lunarstaff.LunarStaffMainCMD;
 import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
@@ -66,6 +63,14 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
 
     }
 
+    public void registerTab() {
+
+    }
+
+    public void registerScoreboard() {
+
+    }
+
     @Override
     public void onDisable() {
     }
@@ -86,7 +91,6 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
 
     public void registerCMDs() {
 
-        commandFramework.registerCommands(new LunarClientCommand());
         commandFramework.registerCommands(new FlyCMD());
         commandFramework.registerCommands(new ReloadCMD());
         commandFramework.registerCommands(new DebugCMD());
@@ -94,10 +98,6 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         commandFramework.registerCommands(new HelpCMD());
         commandFramework.registerCommands(new ServersCMD());
         commandFramework.registerCommands(new HealCMD());
-
-        commandFramework.registerCommands(new LunarStaffMainCMD());
-        commandFramework.registerCommands(new LunarStaffDisableCMD());
-        commandFramework.registerCommands(new LunarStaffEnableCMD());
 
         commandFramework.registerCommands(new GamemodeCMD());
         commandFramework.registerCommands(new SurvivalCMD());
