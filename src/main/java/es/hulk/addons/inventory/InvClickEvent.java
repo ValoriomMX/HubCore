@@ -2,6 +2,7 @@ package es.hulk.addons.inventory;
 
 import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
+import me.joeleoli.portal.shared.queue.Queue;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -28,7 +29,9 @@ public class InvClickEvent implements Listener {
         if (inv.getTitle().equalsIgnoreCase(Utils.color(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.TITLE")))) {
             for (String path : HubAddons.getInstance().getMenusConfig().getConfigurationSection("SERVER-SELECTOR.ITEMS").getKeys(false)) {
                 if (is.getType() == Material.valueOf(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".ITEM")) && is.getItemMeta().getDisplayName().equals(Utils.color(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".NAME")))) {
-                    HubAddons.getInstance().sendToServer(p, HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
+//                    HubAddons.getInstance().sendToServer(p, HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
+                    Queue queue = Queue.getByPlayer(p.getUniqueId());
+                    queue.sendPlayer(p, HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
                     p.closeInventory();
                 }
             }
