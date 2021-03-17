@@ -55,6 +55,7 @@
                                     <include>com.comphenix.tinyprotocol:*</include>
                                     <include>cc.outlast:*</include>
                                     <include>io.github.thatkawaiisam:*</include>
+                                    <include>me.joeleoli:*</include>
                                 </includes>
                             </artifactSet>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
@@ -93,6 +94,13 @@
             <groupId>io.github.thatkawaiisam</groupId>
             <artifactId>assemble</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>portal.api</groupId>
+            <artifactId>portalapi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/librerias/PortalAPI.jar</systemPath>
         </dependency>
     </dependencies>
 
