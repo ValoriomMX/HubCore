@@ -4,6 +4,7 @@ import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import io.github.thatkawaiisam.assemble.AssembleAdapter;
 import me.clip.placeholderapi.PlaceholderAPI;
+import me.joeleoli.portal.shared.queue.Queue;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -20,9 +21,17 @@ public class ScoreboardProvider implements AssembleAdapter {
     public List<String> getLines(final Player player) {
         Player p = player.getPlayer();
         final List<String> board = new ArrayList<String>();
-        for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.LINES")) {
-            String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
-            board.add(placeholder);
+        Queue queue = Queue.getByPlayer(player.getUniqueId());
+        if (!queue.containsPlayer(player.getUniqueId())) {
+            for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
+                String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
+                board.add(placeholder);
+            }
+        } else {
+            for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.QUEUED")) {
+                String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
+                board.add(placeholder);
+            }
         }
         return board;
     }
