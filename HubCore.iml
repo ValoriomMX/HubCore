@@ -25,5 +25,14 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" name="Maven: cc.outlast:OutlastTablist:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: io.github.thatkawaiisam:assemble:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: portal.api:portalapi:1.0-SNAPSHOT">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/librerias/PortalAPI.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -1,7 +1,15 @@
 SCOREBOARD:
-  ENABLED: true
   TITLE: "&3GalactiCraft &7❘ &fHub-1"
-  LINES:
+  NORMAL:
+    - "&7&m------------------"
+    - "&3Name &7» &f%player_name%"
+    - "&3Rank &7» &r%aqua_player_rank%"
+    - "&6"
+    - "&3Players &7» &f%bungee_total%"
+    - "&6"
+    - "&aplay.galacticraft.space"
+    - "&7&m------------------"
+  QUEUED:
     - "&7&m------------------"
     - "&3Name &7» &f%player_name%"
     - "&3Rank &7» &r%aqua_player_rank%"
