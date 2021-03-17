@@ -29,10 +29,11 @@ public class ScoreboardProvider implements AssembleAdapter {
             }
         } else {
             for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.QUEUED")) {
-                String queueConfig = new String();
                 String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
-                board.add(queueConfig.replaceAll("%queue_position", String.valueOf(queue.getPosition(player.getUniqueId()))).replaceAll("%queue_name%", String.valueOf(queue.getByPlayer(player.getUniqueId()))).replaceAll("%queue_total%", String.valueOf(queue.getPlayers().size())));
-                board.add(placeholder);
+                board.add(placeholder.
+                        replaceAll("%queue_position", String.valueOf(queue.getPosition(player.getUniqueId()))).
+                        replaceAll("%queue_name%", String.valueOf(queue.getByPlayer(player.getUniqueId()))).
+                        replaceAll("%queue_total%", String.valueOf(queue.getPlayers().size())));
             }
         }
         return board;
