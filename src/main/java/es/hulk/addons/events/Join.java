@@ -56,6 +56,21 @@ public class Join implements Listener {
         new BukkitRunnable() {
             @Override
             public void run() {
+                for (String path : HubAddons.getInstance().getItemsConfig().getConfigurationSection("JOIN-ITEMS").getKeys(false)) {
+                    if (HubAddons.getInstance().getItemsConfig().getBoolean("JOIN-ITEMS." + path + ".ENABLED")) {
+                        ItemStack item = new ItemStack(Material.getMaterial(HubAddons.getInstance().getItemsConfig().getString("JOIN-ITEMS." + path + ".MATERIAL")), HubAddons.getInstance().getItemsConfig().getInt("JOIN-ITEMS." + path + ".AMOUNT"), (short) HubAddons.getInstance().getItemsConfig().getInt("JOIN-ITEMS." + path + ".DATA"));
+                        ItemMeta meta = item.getItemMeta();
+                        meta.setDisplayName(Utils.color(HubAddons.getInstance().getItemsConfig().getString("JOIN-ITEMS." + path + ".DISPLAYNAME")));
+                        item.setItemMeta(meta);
+                        p.getInventory().setItem(HubAddons.getInstance().getItemsConfig().getInt("JOIN-ITEMS." + path + ".SLOT"), item);
+                    }
+                }
+            }
+        }.runTaskLater(HubAddons.getInstance(), 5);
+
+        /*new BukkitRunnable() {
+            @Override
+            public void run() {
                 if (HubAddons.getInstance().getItemsConfig().getBoolean("SERVER-SELECTOR-ITEM.ENABLED")) {
                     ItemStack selitem = new ItemStack(Material.getMaterial(HubAddons.getInstance().getItemsConfig().getString("SERVER-SELECTOR-ITEM.MATERIAL")), HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.AMOUNT"), (short) HubAddons.getInstance().getItemsConfig().getInt("SERVER-SELECTOR-ITEM.DATA"));
                     ItemMeta brujulaMeta = selitem.getItemMeta();
@@ -80,7 +95,7 @@ public class Join implements Listener {
                     }
                 }
             }
-        }.runTaskLater(HubAddons.getInstance(), 5);
+        }.runTaskLater(HubAddons.getInstance(), 5);*/
 
     }
 
