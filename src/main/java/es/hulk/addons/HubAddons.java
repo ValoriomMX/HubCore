@@ -41,8 +41,6 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     private File menusFile;
     private FileConfiguration menusConfig;
 
-    private static int playercount = 0;
-
     private CommandFramework commandFramework;
     @Getter
     public static HubAddons instance;
