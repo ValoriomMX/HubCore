@@ -1,5 +1,6 @@
 package es.hulk.addons;
 
+import cc.outlast.tablist.OutlastTab;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -9,7 +10,11 @@ import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
+import es.hulk.addons.providers.ScoreboardProvider;
+import es.hulk.addons.providers.TablistProvider;
 import es.hulk.addons.utils.command.CommandFramework;
+import io.github.thatkawaiisam.assemble.Assemble;
+import io.github.thatkawaiisam.assemble.AssembleStyle;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -60,15 +65,23 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
 
         registerEvents();
         registerCMDs();
-
-    }
-
-    public void registerTab() {
+        registerTab();
+        registerScoreboard();
 
     }
 
     public void registerScoreboard() {
+        if (getConfig().getBoolean("BOOLEANS.SCOREBOARD")) {
+            Assemble assemble = new Assemble(this, new ScoreboardProvider());
+            assemble.setTicks(2L);
+            assemble.setAssembleStyle(AssembleStyle.MODERN);
+        }
+    }
 
+    public void registerTab() {
+        if (getConfig().getBoolean("BOOLEANS.TAB")) {
+            new OutlastTab(this, new TablistProvider(), 40L);
+        }
     }
 
     @Override
