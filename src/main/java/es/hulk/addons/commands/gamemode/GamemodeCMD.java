@@ -32,7 +32,7 @@ public class GamemodeCMD extends BaseCommand {
 
     @Completer(name = "gamemode", aliases = "gamemode")
     public List<String> testCompleter(CommandArgs args) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         list.add("creative");
         list.add("survival");
         list.add("adventure");

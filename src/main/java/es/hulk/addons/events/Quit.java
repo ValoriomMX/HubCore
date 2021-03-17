@@ -11,7 +11,6 @@ public class Quit implements Listener {
 
     @EventHandler
     public void QuitEvent(PlayerQuitEvent e) {
-        Player p = e.getPlayer();
         if (HubAddons.getInstance().getConfig().getBoolean("DEFAULT-QUIT-MESSAGE.ENABLED")) {
             e.setQuitMessage(Utils.color(Utils.stringConfig("DEFAULT-QUIT-MESSAGE.MESSAGE")));
         } else {

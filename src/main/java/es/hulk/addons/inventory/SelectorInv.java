@@ -17,8 +17,8 @@ public class SelectorInv implements Listener {
     public static void openInventory(Player p) {
         Inventory selInv = InventoryMaker.createInventory(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.TITLE"), HubAddons.getInstance().getMenusConfig().getInt("SERVER-SELECTOR.ROWS"));
 
-        int slot = 0;
         for(String path : HubAddons.getInstance().getMenusConfig().getConfigurationSection("SERVER-SELECTOR.ITEMS").getKeys(false)) {
+            int slot = 0;
 
             List<String> lore = new ArrayList<>();
 

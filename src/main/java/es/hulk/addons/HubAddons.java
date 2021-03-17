@@ -111,6 +111,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         commandFramework.registerCommands(new HelpCMD());
         commandFramework.registerCommands(new ServersCMD());
         commandFramework.registerCommands(new HealCMD());
+        commandFramework.registerCommands(new FeedCMD());
 
         commandFramework.registerCommands(new GamemodeCMD());
         commandFramework.registerCommands(new SurvivalCMD());

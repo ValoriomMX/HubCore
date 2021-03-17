@@ -6,7 +6,6 @@ import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.SelectorInv;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;

@@ -48,11 +48,7 @@ public class Booleans implements Listener {
 
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent e) {
-        if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.DROPITEMS")) {
-            e.setCancelled(true);
-        } else {
-            e.setCancelled(false);
-        }
+        e.setCancelled(HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.DROPITEMS"));
     }
 
     @EventHandler
@@ -77,11 +73,7 @@ public class Booleans implements Listener {
 
     @EventHandler
     public void FoodLevel(FoodLevelChangeEvent e) {
-        if (HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.FOOD-LEVEL-CHANGE")) {
-            e.setCancelled(true);
-        } else {
-            e.setCancelled(false);
-        }
+        e.setCancelled(HubAddons.getInstance().getConfig().getBoolean("BOOLEANS.FOOD-LEVEL-CHANGE"));
     }
 
 }

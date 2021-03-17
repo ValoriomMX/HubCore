@@ -29,7 +29,7 @@ public class MainCMD extends BaseCommand {
 
     @Completer(name = "hubaddons", aliases = "hubaddons")
     public List<String> testCompleter(CommandArgs args) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         list.add("reload");
         return list;
     }

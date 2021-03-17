@@ -15,15 +15,13 @@ public class TablistProvider implements Listener, ITablist {
     @Override
     public String getHeader(Player player) {
         String header = HubAddons.getInstance().getTabConfig().getString("TAB.HEADER");
-        String papi = PlaceholderAPI.setPlaceholders(player, header);
-        return papi;
+        return PlaceholderAPI.setPlaceholders(player, header);
     }
 
     @Override
     public String getFooter(Player player) {
         String footer = HubAddons.getInstance().getTabConfig().getString("TAB.FOOTER");
-        String papi = PlaceholderAPI.setPlaceholders(player, footer);
-        return papi;
+        return PlaceholderAPI.setPlaceholders(player, footer);
     }
 
     @Override

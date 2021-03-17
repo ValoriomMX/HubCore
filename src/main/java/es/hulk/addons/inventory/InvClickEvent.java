@@ -3,7 +3,6 @@ package es.hulk.addons.inventory;
 import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import me.joeleoli.portal.shared.queue.Queue;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
