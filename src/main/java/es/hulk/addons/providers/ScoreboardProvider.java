@@ -19,7 +19,20 @@ public class ScoreboardProvider implements AssembleAdapter {
 
     @Override
     public List<String> getLines(final Player player) {
-        List<String> board = new ArrayList<>();
+        List<String> toReturn = new ArrayList<>();
+
+        /*for (String string : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
+            string = Utils.color(string);
+            if (HubAddons.getQueue().inQueue(player)) {
+                string = string.replace("%queue_position", String.valueOf(HubAddons.getQueue().getPosition(player)));
+                string = string.replace("%queue_name%", String.valueOf(HubAddons.getQueue().getQueueIn(player)));
+                string = string.replace("%queue_total%", String.valueOf(HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(player))));
+            }
+            toReturn.add(string);
+        }*/
+        return toReturn;
+    }
+}
 
         /*HubAddons.getInstance().getConfig().getStringList("SCOREBOARD.NORMAL").forEach(line ->
                 board.add(line));
@@ -46,9 +59,6 @@ public class ScoreboardProvider implements AssembleAdapter {
                 String placeholder = PlaceholderAPI.setPlaceholders(player, lines);
             }
         }*/
-        return board;
-    }
-}
 
     /*
     @Override
