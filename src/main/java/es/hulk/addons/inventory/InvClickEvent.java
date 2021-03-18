@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class InvClickEvent implements Listener {
 
+    private String queue_name;
+
     @EventHandler
     public void ClickEvent(InventoryClickEvent e) {
         Player p = (Player) e.getWhoClicked();
@@ -28,7 +30,6 @@ public class InvClickEvent implements Listener {
         if (inv.getTitle().equalsIgnoreCase(Utils.color(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.TITLE")))) {
             for (String path : HubAddons.getInstance().getMenusConfig().getConfigurationSection("SERVER-SELECTOR.ITEMS").getKeys(false)) {
                 if (is.getType() == Material.valueOf(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".ITEM")) && is.getItemMeta().getDisplayName().equals(Utils.color(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".NAME")))) {
-//                    HubAddons.getInstance().sendToServer(p, HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
                     Queue queue = Queue.getByName(HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
                     queue.sendPlayer(p, HubAddons.getInstance().getMenusConfig().getString("SERVER-SELECTOR.ITEMS." + path + ".SERVER"));
                     p.closeInventory();
