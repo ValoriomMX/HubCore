@@ -3,7 +3,7 @@ package es.hulk.addons.queue;
 import me.joeleoli.portal.shared.queue.Queue;
 import org.bukkit.entity.Player;
 
-public class PortalAPI {
+public class QueueManager {
 
     public boolean inQueue(Player p) {
         Queue queue = Queue.getByPlayer(p.getUniqueId());

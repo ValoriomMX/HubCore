@@ -9,7 +9,7 @@ import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
-import es.hulk.addons.queue.PortalAPI;
+import es.hulk.addons.queue.QueueManager;
 import es.hulk.addons.providers.ScoreboardProvider;
 import es.hulk.addons.utils.command.CommandFramework;
 import io.github.thatkawaiisam.assemble.Assemble;
@@ -44,7 +44,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     @Getter
     public static HubAddons instance;
 
-    @Getter public static PortalAPI queue;
+    @Getter public static QueueManager queue;
 
     @Override
     public void onEnable() {
@@ -84,7 +84,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     }
 
     public void registerInstances() {
-        queue = new PortalAPI();
+        queue = new QueueManager();
     }
 
     @Override
