@@ -6,4 +6,4 @@ load: POSTWORLD
 loadbefore:
   - AquaCore
 
-depend: [PlaceholderAPI, LunarClient-API]
+depend: [PlaceholderAPI]
