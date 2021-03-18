@@ -28,13 +28,11 @@ public class ScoreboardProvider implements AssembleAdapter {
                     .map(a -> a.replace("%queue_position%", "" + HubAddons.getQueue().getPosition(p)))
                     .map(a -> a.replace("%queue_size%", "" + HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(p))))
                     .collect(Collectors.toList())) {
-                String placeholder = PlaceholderAPI.setPlaceholders(p, add);
-                board.add(placeholder);
+                board.add(add);
             }
         } else {
             for (String add : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
-                String placeholder = PlaceholderAPI.setPlaceholders(p, add);
-                board.add(placeholder);
+                board.add(add);
             }
         }
         return board;

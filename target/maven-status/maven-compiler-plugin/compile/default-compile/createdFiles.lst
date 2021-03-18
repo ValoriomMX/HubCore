@@ -25,6 +25,7 @@ es\hulk\addons\utils\command\Completer.class
 es\hulk\addons\HubAddons.class
 es\hulk\addons\inventory\InvClickEvent.class
 es\hulk\addons\commands\FeedCMD.class
+es\hulk\addons\queue\PortalAPI.class
 es\hulk\addons\providers\TablistProvider.class
 es\hulk\addons\utils\command\CommandFramework.class
 es\hulk\addons\utils\command\BukkitCompleter.class
