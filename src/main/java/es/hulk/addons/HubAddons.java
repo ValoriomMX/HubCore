@@ -1,6 +1,5 @@
 package es.hulk.addons;
 
-import cc.outlast.tablist.OutlastTab;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -10,8 +9,8 @@ import es.hulk.addons.events.*;
 import es.hulk.addons.inventory.HubServerInv;
 import es.hulk.addons.inventory.InvClickEvent;
 import es.hulk.addons.inventory.SelectorInv;
+import es.hulk.addons.queue.PortalAPI;
 import es.hulk.addons.providers.ScoreboardProvider;
-import es.hulk.addons.providers.TablistProvider;
 import es.hulk.addons.utils.command.CommandFramework;
 import io.github.thatkawaiisam.assemble.Assemble;
 import io.github.thatkawaiisam.assemble.AssembleStyle;
@@ -44,6 +43,8 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     private CommandFramework commandFramework;
     @Getter
     public static HubAddons instance;
+
+    @Getter public static PortalAPI queue;
 
     @Override
     public void onEnable() {
@@ -80,6 +81,10 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
         /*if (getConfig().getBoolean("BOOLEANS.TAB")) {
             new OutlastTab(this, new TablistProvider(), 40L);
         }*/
+    }
+
+    public void registerInstances() {
+        queue = new PortalAPI();
     }
 
     @Override
