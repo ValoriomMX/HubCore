@@ -21,11 +21,16 @@ public class ScoreboardProvider implements AssembleAdapter {
     public List<String> getLines(final Player player) {
         Player p = player.getPlayer();
         final List<String> board = new ArrayList<>();
-        for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
+        /*for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
             String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
             board.add(placeholder);
         }
-        /*Queue queue = Queue.getByPlayer(player.getUniqueId());
+        Queue queue = Queue.getByPlayer(player.getUniqueId());
+
+        int queue_position = queue.getPosition(player.getUniqueId());
+        String queue_name = queue.getName();
+        int queue_size = queue.getPlayers().size();
+
         if (!queue.containsPlayer(player.getUniqueId())) {
             for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
                 String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
@@ -34,12 +39,14 @@ public class ScoreboardProvider implements AssembleAdapter {
         } else {
             for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.QUEUED")) {
                 String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
-                board.add(placeholder.
-                        replaceAll("%queue_position%", String.valueOf(queue.getPosition(player.getUniqueId()))).
-                        replaceAll("%queue_name%", String.valueOf(queue)).
-                        replaceAll("%queue_total%", String.valueOf(queue.getPlayers().size())));
+                board.add(placeholder +
+                        queue_name.replaceAll("%queue_name%", queue.getName()) +
+                        Integer.toString(queue_position).replaceAll("%queue_position%", String.valueOf(queue.getPosition(player.getUniqueId()))) +
+                        Integer.toString(queue_size).replaceAll("%queue_size%", String.valueOf(queue.getPlayers().size())));
             }
-        }*/
+        }
+
+ */
         return board;
     }
 }
