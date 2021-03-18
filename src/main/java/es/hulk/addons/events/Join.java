@@ -53,7 +53,7 @@ public class Join implements Listener {
             }
         }
 
-        new BukkitRunnable() {
+ /*       new BukkitRunnable() {
             @Override
             public void run() {
                 for (String path : HubAddons.getInstance().getItemsConfig().getConfigurationSection("JOIN-ITEMS").getKeys(false)) {
@@ -66,9 +66,9 @@ public class Join implements Listener {
                     }
                 }
             }
-        }.runTaskLater(HubAddons.getInstance(), 5);
+        }.runTaskLater(HubAddons.getInstance(), 5);*/
 
-        /*new BukkitRunnable() {
+        new BukkitRunnable() {
             @Override
             public void run() {
                 if (HubAddons.getInstance().getItemsConfig().getBoolean("SERVER-SELECTOR-ITEM.ENABLED")) {
@@ -95,7 +95,7 @@ public class Join implements Listener {
                     }
                 }
             }
-        }.runTaskLater(HubAddons.getInstance(), 5);*/
+        }.runTaskLater(HubAddons.getInstance(), 5);
 
     }
 
