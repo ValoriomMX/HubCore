@@ -63,7 +63,7 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
 
         registerEvents();
         registerCMDs();
-        registerTab();
+        //registerTab();
         registerScoreboard();
 
     }
@@ -77,9 +77,9 @@ public class HubAddons extends JavaPlugin implements PluginMessageListener {
     }
 
     public void registerTab() {
-        if (getConfig().getBoolean("BOOLEANS.TAB")) {
+        /*if (getConfig().getBoolean("BOOLEANS.TAB")) {
             new OutlastTab(this, new TablistProvider(), 40L);
-        }
+        }*/
     }
 
     @Override
