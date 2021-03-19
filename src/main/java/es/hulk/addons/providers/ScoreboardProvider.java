@@ -21,65 +21,19 @@ public class ScoreboardProvider implements AssembleAdapter {
     public List<String> getLines(final Player player) {
         List<String> toReturn = new ArrayList<>();
 
-        /*for (String string : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
-            string = Utils.color(string);
-            if (HubAddons.getQueue().inQueue(player)) {
-                string = string.replace("%queue_position", String.valueOf(HubAddons.getQueue().getPosition(player)));
-                string = string.replace("%queue_name%", String.valueOf(HubAddons.getQueue().getQueueIn(player)));
-                string = string.replace("%queue_total%", String.valueOf(HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(player))));
-            }
-            toReturn.add(string);
-        }*/
+        if (HubAddons.getQueue().inQueue(player)) {
+            HubAddons.getInstance().getConfig().getStringList("SCOREBOARD.QUEUED").forEach(line -> {
+                line = Utils.color(line);
+                line = PlaceholderAPI.setPlaceholders(player, line);
+
+                toReturn.add(line.
+                        replaceAll("%queue_position", String.valueOf(HubAddons.getQueue().getPosition(player))).
+                        replaceAll("%queue_name%", String.valueOf(HubAddons.getQueue().getQueueIn(player))).
+                        replaceAll("%queue_total%", String.valueOf(HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(player)))));
+            });
+        } else {
+            HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL").forEach(line -> toReturn.add(Utils.color(PlaceholderAPI.setPlaceholders(player, line))));
+        }
         return toReturn;
     }
 }
-
-        /*HubAddons.getInstance().getConfig().getStringList("SCOREBOARD.NORMAL").forEach(line ->
-                board.add(line));
-
-        if (HubAddons.getQueue().inQueue(player)) {
-            HubAddons.getInstance().getConfig().getStringList("SCOREBOARD.QUEUED").forEach(line ->
-                    board.add(line.
-                            replaceAll("%queue_position", String.valueOf(HubAddons.getQueue().getPosition(player))).
-                            replaceAll("%queue_name%", String.valueOf(HubAddons.getQueue().getQueueIn(player))).
-                            replaceAll("%queue_total%", String.valueOf(HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(player))))));
-        }
-
-        /*for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
-            String placeholder = PlaceholderAPI.setPlaceholders(player, lines);
-            board.add(placeholder);
-        }
-
-
-        if (HubAddons.getQueue().inQueue(player)) {
-                board.add(
-                        replaceAll("%queue_position", String.valueOf(HubAddons.getQueue().getPosition(player))).
-                        replaceAll("%queue_name%", String.valueOf(HubAddons.getQueue().getQueueIn(player))).
-                        replaceAll("%queue_total%", String.valueOf(HubAddons.getQueue().getInQueue(HubAddons.getQueue().getQueueIn(player))));
-                String placeholder = PlaceholderAPI.setPlaceholders(player, lines);
-            }
-        }*/
-
-    /*
-    @Override
-    public List<String> getLines(final Player player) {
-        Player p = player.getPlayer();
-        final List<String> board = new ArrayList<>();
-        Queue queue = Queue.getByPlayer(player.getUniqueId());
-        if (!queue.containsPlayer(player.getUniqueId())) {
-            for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.NORMAL")) {
-                String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
-                board.add(placeholder);
-            }
-        } else {
-            for (final String lines : HubAddons.getInstance().getScoreboardConfig().getStringList("SCOREBOARD.QUEUED")) {
-                String queueConfig = new String();
-                lines.replaceAll("%queue_position", String.valueOf(queue.getPosition(player.getUniqueId()))).replaceAll("%queue_name%", String.valueOf(queue.getByPlayer(player.getUniqueId()))).replaceAll("%queue_total%", String.valueOf(queue.getPlayers().size()));
-                String placeholder = PlaceholderAPI.setPlaceholders(p, lines);
-                board.add(placeholder);
-            }
-        }
-        return board;
-    }
-     */
-
