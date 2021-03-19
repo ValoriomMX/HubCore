@@ -19,6 +19,20 @@ LINKS-ITEM:
   DATA: 0
   SLOT: 2
   AMOUNT: 1
+VISIBILITY-TOGGLE:
+  ENABLED: true
+  ON:
+    DISPLAYNAME: "&6Visibility&7: &aON"
+    MATERIAL: INK_SACK
+    DATA: 10
+    SLOT: 1
+    AMOUNT: 1
+  OFF:
+    DISPLAYNAME: "&6Visibility&7: &cOFF"
+    MATERIAL: INK_SACK
+    DATA: 8
+    SLOT: 1
+    AMOUNT: 1
 
 JOIN-ITEMS:
   SERVER-SELECTOR-ITEM:
