@@ -4,7 +4,6 @@ import es.hulk.addons.HubAddons;
 import es.hulk.addons.utils.Utils;
 import io.github.thatkawaiisam.assemble.AssembleAdapter;
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.joeleoli.portal.shared.queue.Queue;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
